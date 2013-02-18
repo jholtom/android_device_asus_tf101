@@ -1,0 +1,92 @@
+<resources>
+
+    <string-array name="cpu_settings_array">
+        <item>@string/cpu_pwrsv</item>
+        <item>@string/cpu_bal</item>
+        <item>@string/cpu_pref</item>
+    </string-array>
+
+    <string-array name="cpu_settings_array_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="keyboard_layout_array">
+        <item>@string/kbl_fr_BE</item>
+        <item>@string/kbl_nl_BE</item>
+        <item>@string/kbl_pt_BR</item>
+        <item>@string/kbl_en_CA</item>
+        <item>@string/kbl_fr_CA</item>
+        <item>@string/kbl_de_CH</item>
+        <item>@string/kbl_fr_CH</item>
+        <item>@string/kbl_it_CH</item>
+        <item>@string/kbl_zh_CN</item>
+        <item>@string/kbl_cs_CZ</item>
+        <item>@string/kbl_de_DE</item>
+        <item>@string/kbl_da_DK</item>
+        <item>@string/kbl_ar_EG</item>
+        <item>@string/kbl_es_ES</item>
+        <item>@string/kbl_fi_FI</item>
+        <item>@string/kbl_fr_FR</item>
+        <item>@string/kbl_en_GB</item>
+        <item>@string/kbl_el_GR</item>
+        <item>@string/kbl_en_GR</item>
+        <item>@string/kbl_hu_HU</item>
+        <item>@string/kbl_iw_IL</item>
+        <item>@string/kbl_it_IT</item>
+        <item>@string/kbl_fa_IR</item>
+        <item>@string/kbl_ko_KR</item>
+        <item>@string/kbl_nl_NL</item>
+        <item>@string/kbl_nb_NO</item>
+        <item>@string/kbl_pl_PL</item>
+        <item>@string/kbl_pt_PT</item>
+        <item>@string/kbl_ru_RU</item>
+        <item>@string/kbl_sv_SE</item>
+        <item>@string/kbl_sk_SK</item>
+        <item>@string/kbl_th_TH</item>
+        <item>@string/kbl_tr_TR</item>
+        <item>@string/kbl_zh_TW</item>
+        <item>@string/kbl_en_US</item>
+        <item>@string/kbl_es_US</item>
+    </string-array>
+
+    <string-array name="keyboard_layout_array_values">
+        <item>fr_BE</item>
+        <item>nl_BE</item>
+        <item>pt_BR</item>
+        <item>en_CA</item>
+        <item>fr_CA</item>
+        <item>de_CH</item>
+        <item>fr_CH</item>
+        <item>it_CH</item>
+        <item>zh_CN</item>
+        <item>cs_CZ</item>
+        <item>de_DE</item>
+        <item>da_DK</item>
+        <item>ar_EG</item>
+        <item>es_ES</item>
+        <item>fi_FI</item>
+        <item>fr_FR</item>
+        <item>en_GB</item>
+        <item>el_GR</item>
+        <item>en_GR</item>
+        <item>hu_HU</item>
+        <item>iw_IL</item>
+        <item>it_IT</item>
+        <item>fa_IR</item>
+        <item>ko_KR</item>
+        <item>nl_NL</item>
+        <item>nb_NO</item>
+        <item>pl_PL</item>
+        <item>pt_PT</item>
+        <item>ru_RU</item>
+        <item>sv_SE</item>
+        <item>sk_SK</item>
+        <item>th_TH</item>
+        <item>tr_TR</item>
+        <item>zh_TW</item>
+        <item>en_US</item>
+        <item>es_US</item>
+    </string-array>
+</resources>
