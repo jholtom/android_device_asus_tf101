@@ -120,10 +120,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/lib/modules/tun.ko:system/lib/modules/tun.ko \
     $(LOCAL_PATH)/prebuilt/lib/modules/xpad.ko:system/lib/modules/xpad.ko
 
-# keyboard dock support
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/asusdec/com.cyanogenmod.asusdec.xml:system/etc/permissions/com.cyanogenmod.asusdec.xml
-
 # tablet
 PRODUCT_CHARACTERISTICS := tablet
 
