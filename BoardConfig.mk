@@ -81,8 +81,8 @@ BOARD_USE_SKIA_LCDTEXT := true
 BOARD_NO_ALLOW_DEQUEUE_CURRENT_BUFFER := true
 
 # kernel - disable inline building for now  
-# TARGET_KERNEL_SOURCE := kernel/asus/tf101
-# TARGET_KERNEL_CONFIG := harmony_liquid_defconfig
+TARGET_KERNEL_SOURCE := kernel/asus/tf101
+TARGET_KERNEL_CONFIG := fatkat_defconfig
 
 # recovery
 BOARD_HAS_NO_MISC_PARTITION := true
