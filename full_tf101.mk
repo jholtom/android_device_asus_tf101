@@ -21,7 +21,7 @@ PRODUCT_PACKAGES := \
 	VisualizationWallpapers \
 
 PRODUCT_PACKAGES += \
-    	Camera
+	Camera
 
 
 # device
@@ -37,3 +37,9 @@ PRODUCT_BRAND := asus
 PRODUCT_MANUFACTURER := Asus
 PRODUCT_MODEL := Transformer Pad
 
+
+# AGPS patch
+PRODUCT_COPY_FILES += \
+    device/asus/tf101/prebuilt/etc/gps.conf:system/etc/gps.conf \
+    device/asus/tf101/prebuilt/etc/SuplRootCert:system/etc/SuplRootCert \
+    device/asus/tf101/prebuilt/etc/gps/gpsconfig.xml:system/etc/gps/gpsconfig.xml
