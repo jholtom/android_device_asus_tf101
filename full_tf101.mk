@@ -23,6 +23,16 @@ PRODUCT_PACKAGES := \
 PRODUCT_PACKAGES += \
 	Camera
 
+# Build asusdec
+PRODUCT_PACKAGES += \
+    com.cyanogenmod.asusdec \
+    libasusdec_jni		
+		
+# AGPS patch
+PRODUCT_COPY_FILES += \
+    device/asus/tf101/prebuilt/etc/gps.conf:system/etc/gps.conf \
+    device/asus/tf101/prebuilt/etc/SuplRootCert:system/etc/SuplRootCert \
+    device/asus/tf101/prebuilt/etc/gps/gpsconfig.xml:system/etc/gps/gpsconfig.xml
 
 # device
 $(call inherit-product, device/asus/tf101/device.mk)
