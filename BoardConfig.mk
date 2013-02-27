@@ -82,8 +82,7 @@ BOARD_NO_ALLOW_DEQUEUE_CURRENT_BUFFER := true
 
 # kernel - disable inline building for now  
 TARGET_KERNEL_SOURCE := kernel/asus/tf101
-TARGET_KERNEL_CONFIG := lumpy_defconfig
-
+TARGET_PREBUILT_KERNEL := device/asus/tf101/prebuilt/kernel
 # recovery
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true

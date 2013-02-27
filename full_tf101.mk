@@ -15,18 +15,8 @@
 #
 
 # camera
-PRODUCT_PACKAGES := \
-	HoloSpiralWallpaper \
-	LiveWallpapersPicker \
-	VisualizationWallpapers \
-
 PRODUCT_PACKAGES += \
 	Camera
-
-# Build asusdec
-PRODUCT_PACKAGES += \
-    com.cyanogenmod.asusdec \
-    libasusdec_jni		
 		
 # AGPS patch
 PRODUCT_COPY_FILES += \

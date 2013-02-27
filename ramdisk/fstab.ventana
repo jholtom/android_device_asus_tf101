@@ -6,4 +6,4 @@
 
 /dev/block/mmcblk0p1           /system             ext4      ro                                                    wait
 /dev/block/mmcblk0p2           /cache              ext4      rw,nosuid,nodev,noatime,user_xattr,acl,barrier=1,journal_async_commit,nodelalloc,data=writeback    wait
-/dev/block/mmcblk0p7           /data               ext4      rw,nosuid,nodev,noatime,user_xattr,acl,barrier=1,journal_async_commit,nodelalloc,data=writeback    wait
+/dev/block/mmcblk0p7           /data               ext4      rw,nodev,noatime,user_xattr,acl,barrier=1,journal_async_commit,nodelalloc,data=writeback    wait
