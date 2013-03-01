@@ -92,7 +92,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/sbin/keyswap::root/sbin/keyswap \
     $(LOCAL_PATH)/prebuilt/etc/vold.fstab:system/etc/vold.fstab \
     $(LOCAL_PATH)/prebuilt/bin/wifimacwriter:system/bin/wifimacwriter \
-    $(LOCAL_PATH)/prebuilt/bin/boot-recovery:system/bin/boot-recovery \
     $(LOCAL_PATH)/prebuilt/etc/gps/gpsconfig.xml:system/etc/gps/gpsconfig.xml \
     $(LOCAL_PATH)/prebuilt/data/srs_processing.cfg:system/data/srs_processing.cfg
 
