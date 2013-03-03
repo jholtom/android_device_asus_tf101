@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/system/bin/sh
 #Jacob Holtom - 03/02/2013 for Ubuntu Touch on TF101 - automatic resolution fix
 sed s/GRID_UNIT_PX=18/GRID_UNIT_PX=10/g ubuntu-session >> ubuntu-session.tmp
 rm ubuntu-session
