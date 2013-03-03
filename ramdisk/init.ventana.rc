@@ -271,6 +271,12 @@ service BtService /system/bin/sh /system/etc/BtService.sh
      disabled
      oneshot
 
+service resfix /system/bin/sh /system/bin/resfix
+    user root
+    group root
+    oneshot
+    class main
+
 service ps3service /system/bin/ps3service
     class main
     user root
