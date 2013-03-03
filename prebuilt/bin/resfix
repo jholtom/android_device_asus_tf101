@@ -1,0 +1,24 @@
+#!/bin/bash
+#Jacob Holtom - 03/02/2013 for Ubuntu Touch on TF101 - automatic resolution fix
+cd /data/ubuntu/usr/bin/
+sed s/GRID_UNIT_PX=18/GRID_UNIT_PX=10/g ubuntu-session >> ubuntu-session.tmp
+rm ubuntu-session
+mv ubuntu-session.tmp ubuntu-session
+sed s/GRID_UNIT_PX=30/GRID_UNIT_PX=10/g ubuntu-session >> ubuntu-session.tmp
+rm ubuntu-session
+mv ubuntu-session.tmp ubuntu-session
+sed s/GRID_UNIT_PX=14/GRID_UNIT_PX=10/g ubuntu-session >> ubuntu-session.tmp
+rm ubuntu-session
+mv ubuntu-session.tmp ubuntu-session
+sed s/GRID_UNIT_PX=20/GRID_UNIT_PX=10/g ubuntu-session >> ubuntu-session.tmp
+rm ubuntu-session
+mv ubuntu-session.tmp ubuntu-session
+sed s/QTWEBKIT_DPR=2.5/QTWEBKIT_DPR=1.2/g ubuntu-session >> ubuntu-session.tmp
+rm ubuntu-session
+mv ubuntu-session.tmp ubuntu-session
+sed s/QTWEBKIT_DPR=1.3/QTWEBKIT_DPR=1.2/g ubuntu-session >> ubuntu-session.tmp
+rm ubuntu-session
+mv ubuntu-session.tmp ubuntu-session
+sed s/QTWEBKIT_DPR=2.0/QTWEBKIT_DPR=1.2/g ubuntu-session >> ubuntu-session.tmp
+rm ubuntu-session
+mv ubuntu-session.tmp ubuntu-session
