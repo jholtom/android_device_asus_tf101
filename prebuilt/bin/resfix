@@ -1,24 +1,39 @@
 #!/system/bin/sh
 #Jacob Holtom - 03/02/2013 for Ubuntu Touch on TF101 - automatic resolution fix
-cd /data/ubuntu/usr/bin
-sed s/GRID_UNIT_PX=18/GRID_UNIT_PX=10/g ubuntu-session >> ubuntu-session.tmp
-rm ubuntu-session
-mv ubuntu-session.tmp ubuntu-session
-sed s/GRID_UNIT_PX=30/GRID_UNIT_PX=10/g ubuntu-session >> ubuntu-session.tmp
-rm ubuntu-session
-mv ubuntu-session.tmp ubuntu-session
-sed s/GRID_UNIT_PX=14/GRID_UNIT_PX=10/g ubuntu-session >> ubuntu-session.tmp
-rm ubuntu-session
-mv ubuntu-session.tmp ubuntu-session
-sed s/GRID_UNIT_PX=20/GRID_UNIT_PX=10/g ubuntu-session >> ubuntu-session.tmp
-rm ubuntu-session
-mv ubuntu-session.tmp ubuntu-session
-sed s/QTWEBKIT_DPR=2.5/QTWEBKIT_DPR=1.2/g ubuntu-session >> ubuntu-session.tmp
-rm ubuntu-session
-mv ubuntu-session.tmp ubuntu-session
-sed s/QTWEBKIT_DPR=1.3/QTWEBKIT_DPR=1.2/g ubuntu-session >> ubuntu-session.tmp
-rm ubuntu-session
-mv ubuntu-session.tmp ubuntu-session
-sed s/QTWEBKIT_DPR=2.0/QTWEBKIT_DPR=1.2/g ubuntu-session >> ubuntu-session.tmp
-rm ubuntu-session
-mv ubuntu-session.tmp ubuntu-session
+
+session="/data/ubuntu/usr/bin/ubuntu-session"
+
+mkdir -p /data/ubuntu/proc
+mkdir -p /data/testdir
+mount -t proc proc /data/ubuntu/proc    
+
+
+if [ ! -f $session ]
+then 
+  echo "session not found"
+  exit 1
+fi
+
+grep -q ventana $session
+if [ $? -ne 0 ] 
+then
+    echo "inserting fix"
+    cat $session | awk '{
+      if(index($0,"elif [ \"$device\" == \"grouper\" ]; then")==1){	
+	print "elif [ \"$device\" == \"ventana\" ]; then"
+	print "    services=\"/etc/tablet-services\""
+	print "    grep -q GRID_UNIT_PX /home/phablet/.bashrc"
+	print "    [ $? -ne 0 ] && echo \"export GRID_UNIT_PX=10\" >> /home/phablet/.bashrc"
+	print "    export GRID_UNIT_PX=10"
+	print "    grep -q QTWEBKIT_DPR /home/phablet/.bashrc"
+	print "    [ $? -ne 0 ] && echo \"export QTWEBKIT_DPR=1.2\" >> /home/phablet/.bashrc"
+	print "    export QTWEBKIT_DPR=1.2"
+	print "    export FORM_FACTOR=\"tablet\""
+	print "elif [ \"$device\" == \"grouper\" ]; then "
+      }else{
+	print $0
+      }
+    }' > "$session.tmp"
+    mv "$session.tmp" $session
+    chmod 755 $session
+fi
