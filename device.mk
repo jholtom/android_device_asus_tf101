@@ -101,6 +101,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/etc/nvram.txt:system/etc/nvram.txt \
     $(LOCAL_PATH)/prebuilt/etc/nvram_nh615.txt:system/etc/nvram_nh615.txt \
     $(LOCAL_PATH)/prebuilt/etc/nvram_murata.txt:system/etc/nvram_murata.txt \
+    $(LOCAL_PATH)/prebuilt/etc/ubuntu-session.d/tf101.conf:system/etc/ubuntu-session.d/tf101.conf \
     $(LOCAL_PATH)/prebuilt/etc/nvram_nh615_sl101.txt:system/etc/nvram_nh615_sl101.txt
 
 # bluetooth

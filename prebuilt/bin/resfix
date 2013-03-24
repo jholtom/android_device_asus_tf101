@@ -7,5 +7,5 @@ device="/data/ubuntu/etc/ubuntu-session.d/tf101.conf"
 if [ ! -f $device ]
 then 
   echo "installing device file"
-  cp /etc/ubuntu-session.d/tf101.conf $device
+  cp /system/etc/ubuntu-session.d/tf101.conf $device
 fi
