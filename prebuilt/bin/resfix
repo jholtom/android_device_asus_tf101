@@ -1,39 +1,11 @@
 #!/system/bin/sh
 #Jacob Holtom - 03/02/2013 for Ubuntu Touch on TF101 - automatic resolution fix
 
-session="/data/ubuntu/usr/bin/ubuntu-session"
-
-mkdir -p /data/ubuntu/proc
-mkdir -p /data/testdir
-mount -t proc proc /data/ubuntu/proc    
+device="/data/ubuntu/etc/ubuntu-session.d/tf101.conf"
 
 
-if [ ! -f $session ]
+if [ ! -f $device ]
 then 
-  echo "session not found"
-  exit 1
-fi
-
-grep -q ventana $session
-if [ $? -ne 0 ] 
-then
-    echo "inserting fix"
-    cat $session | awk '{
-      if(index($0,"elif [ \"$device\" == \"grouper\" ]; then")==1){	
-	print "elif [ \"$device\" == \"ventana\" ]; then"
-	print "    services=\"/etc/tablet-services\""
-	print "    grep -q GRID_UNIT_PX /home/phablet/.bashrc"
-	print "    [ $? -ne 0 ] && echo \"export GRID_UNIT_PX=10\" >> /home/phablet/.bashrc"
-	print "    export GRID_UNIT_PX=10"
-	print "    grep -q QTWEBKIT_DPR /home/phablet/.bashrc"
-	print "    [ $? -ne 0 ] && echo \"export QTWEBKIT_DPR=1.2\" >> /home/phablet/.bashrc"
-	print "    export QTWEBKIT_DPR=1.2"
-	print "    export FORM_FACTOR=\"tablet\""
-	print "elif [ \"$device\" == \"grouper\" ]; then "
-      }else{
-	print $0
-      }
-    }' > "$session.tmp"
-    mv "$session.tmp" $session
-    chmod 755 $session
+  echo "installing device file"
+  cp /etc/ubuntu-session.d/tf101.conf $device
 fi
