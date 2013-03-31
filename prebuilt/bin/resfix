@@ -1,5 +1,4 @@
 #!/system/bin/sh
-#Jacob Holtom - 03/02/2013 for Ubuntu Touch on TF101 - automatic resolution fix
 
 device="/data/ubuntu/etc/ubuntu-session.d/tf101.conf"
 
