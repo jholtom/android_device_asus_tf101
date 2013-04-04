@@ -1,5 +1,4 @@
 #!/system/bin/sh
-#Jacob Holtom - 03/02/2013 for Ubuntu Touch on TF101 - automatic resolution fix
 
 device="/data/ubuntu/etc/ubuntu-session.d/tf101.conf"
 
@@ -8,4 +7,5 @@ if [ ! -f $device ]
 then 
   echo "installing device file"
   cp /system/etc/ubuntu-session.d/tf101.conf $device
+  chmod 644 $device
 fi

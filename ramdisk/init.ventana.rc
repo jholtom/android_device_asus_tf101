@@ -272,7 +272,7 @@ service BtService /system/bin/sh /system/etc/BtService.sh
 
 service resfix /system/bin/sh /system/bin/resfix
     user root
-    group shell
+    group root
     oneshot
     class core
 
